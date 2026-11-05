@@ -131,46 +131,91 @@ td:first-child { font-weight:800; width:22%; font-size:11px; letter-spacing:.08e
 .media.dark .media-caption { color: #fff; }
 @media (max-width:800px) { .media { min-height: 330px; } }
 
-/* =================================
-   KAZAKH MODERN ORNAMENT BACKGROUND
-================================= */
+/* ==========================================
+   KAZAKH TRADITIONAL ORNAMENTS
+========================================== */
+
+/* Full website background */
 
 body {
   background-color: #F5F0E5;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='200' viewBox='0 0 240 200'%3E%3Cg fill='none' stroke='%23159B91' stroke-width='2.5' opacity='.16' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M120 100 C105 100 103 82 91 82 C77 82 72 98 84 107 C96 116 111 105 109 92 C108 82 99 77 91 79'/%3E%3Cpath d='M120 100 C135 100 137 82 149 82 C163 82 168 98 156 107 C144 116 129 105 131 92 C132 82 141 77 149 79'/%3E%3Cpath d='M120 100 L132 112 L120 124 L108 112 Z'/%3E%3Cpath d='M120 100 L120 70 M120 124 L120 154'/%3E%3C/g%3E%3C/svg%3E");
 
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180' viewBox='0 0 180 180'%3E%3Cg fill='none' stroke='%23159B91' stroke-width='2' opacity='.17'%3E%3Cpath d='M90 90 C72 90 72 65 54 65 C36 65 36 88 50 94 C64 100 77 88 77 76 C77 65 68 58 58 58'/%3E%3Cpath d='M90 90 C108 90 108 65 126 65 C144 65 144 88 130 94 C116 100 103 88 103 76 C103 65 112 58 122 58'/%3E%3Cpath d='M90 90 L102 102 L90 114 L78 102 Z'/%3E%3C/g%3E%3C/svg%3E");
-
-  background-size: 180px 180px;
+  background-size: 240px 200px;
+  background-attachment: fixed;
 }
 
 #site {
-  background-color: transparent;
+  background: transparent;
 }
 
-/* =================================
-   HERO
-================================= */
+
+/* ==========================================
+   HERO - MAIN ORNAMENTAL DECORATION
+========================================== */
 
 .hero {
-  background:
-    linear-gradient(120deg, #173C38, #102B28);
+  background: linear-gradient(
+    120deg,
+    #173C38 0%,
+    #102B28 100%
+  );
 }
 
-.hero:before {
-  background:
-    radial-gradient(
-      ellipse at 80% 30%,
-      rgba(21,155,145,.30),
-      transparent 40%
-    ),
-    repeating-linear-gradient(
-      135deg,
-      transparent 0 34px,
-      rgba(217,169,54,.10) 35px 36px
-    );
+/* Large traditional ornament in the hero */
 
-  opacity: 1;
+.hero::after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  pointer-events: none;
+
+  width: clamp(230px, 32vw, 460px);
+  height: clamp(230px, 32vw, 460px);
+
+  right: 3%;
+  top: 15%;
+
+  opacity: .32;
+
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 300'%3E%3Cg fill='none' stroke='%23D9A936' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M150 150 C110 150 110 105 75 105 C35 105 30 155 65 170 C100 185 130 150 120 120 C112 95 85 90 75 105'/%3E%3Cpath d='M150 150 C190 150 190 105 225 105 C265 105 270 155 235 170 C200 185 170 150 180 120 C188 95 215 90 225 105'/%3E%3Cpath d='M150 150 L175 175 L150 200 L125 175 Z'/%3E%3Cpath d='M150 105 L150 75 M150 200 L150 230'/%3E%3Cpath d='M100 150 L75 150 M200 150 L225 150'/%3E%3C/g%3E%3C/svg%3E");
+
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
 }
+
+/* Keep hero text above the ornament */
+
+.hero-kicker,
+.hero-title,
+.hero-bottom,
+.hero-stamp {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-stamp {
+  position: absolute;
+  z-index: 2;
+}
+
+/* Ornamental line beneath the opening kicker */
+
+.hero-kicker::after {
+  content: "";
+  display: block;
+  width: min(100%, 380px);
+  height: 30px;
+  margin-top: 18px;
+
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='190' height='30' viewBox='0 0 190 30'%3E%3Cg fill='none' stroke='%23D9A936' stroke-width='1.8'%3E%3Cpath d='M0 15 H35 M155 15 H190'/%3E%3Cpath d='M35 15 C45 15 45 3 57 3 C69 3 69 15 80 15 C69 15 69 27 57 27 C45 27 45 15 35 15 Z'/%3E%3Cpath d='M155 15 C145 15 145 3 133 3 C121 3 121 15 110 15 C121 15 121 27 133 27 C145 27 145 15 155 15 Z'/%3E%3Cpath d='M95 5 L105 15 L95 25 L85 15 Z'/%3E%3C/g%3E%3C/svg%3E");
+
+  background-repeat: repeat-x;
+  background-size: 190px 30px;
+}
+
+/* Main heading */
 
 .hero-title span {
   color: #D9A936;
@@ -181,9 +226,10 @@ body {
   color: #F5F0E5;
 }
 
-/* =================================
-   ACCENT COLORS
-================================= */
+
+/* ==========================================
+   COLOR ACCENTS
+========================================== */
 
 .progress {
   background: #D95F45;
@@ -226,9 +272,10 @@ body {
   color: #D95F45;
 }
 
-/* =================================
-   STATS
-================================= */
+
+/* ==========================================
+   STATISTICS
+========================================== */
 
 .stat {
   background: #D9A936;
@@ -244,9 +291,10 @@ body {
   color: white;
 }
 
-/* =================================
-   QUOTES
-================================= */
+
+/* ==========================================
+   QUOTES AND CARDS
+========================================== */
 
 .quote {
   background: #173C38;
@@ -257,10 +305,6 @@ body {
   color: #D9A936;
   opacity: .65;
 }
-
-/* =================================
-   VISUAL CARDS
-================================= */
 
 .split-card {
   background: #D9A936;
@@ -273,16 +317,16 @@ body {
 
 .flow-step {
   border-color: #159B91;
-  border-width: 1px;
 }
 
 .flow-arrow {
   color: #D95F45;
 }
 
-/* =================================
-   METRICS
-================================= */
+
+/* ==========================================
+   METRICS AND TIMELINE
+========================================== */
 
 .metric {
   background: #F0DFAF;
@@ -298,10 +342,6 @@ body {
   color: white;
 }
 
-/* =================================
-   TIMELINE
-================================= */
-
 .timeline {
   border-left: 2px solid #159B91;
 }
@@ -311,9 +351,10 @@ body {
   border: 2px solid #F5F0E5;
 }
 
-/* =================================
-   CONCLUSION
-================================= */
+
+/* ==========================================
+   CONCLUSION AND FOOTER
+========================================== */
 
 .conclusion {
   background:
@@ -331,10 +372,6 @@ body {
   color: #D9A936;
 }
 
-/* =================================
-   FOOTER
-================================= */
-
 .footer {
   background: #D9A936;
   color: #173C38;
@@ -342,3 +379,28 @@ body {
 }
 
 
+/* ==========================================
+   MOBILE ADJUSTMENTS
+========================================== */
+
+@media (max-width: 800px) {
+  .hero::after {
+    width: 220px;
+    height: 220px;
+    right: -35px;
+    top: 20%;
+    opacity: .20;
+  }
+
+  .hero-kicker::after {
+    width: 250px;
+  }
+
+  body {
+    background-attachment: scroll;
+    background-size: 180px 160px;
+  }
+}
+.hero::before {
+  background: none;
+}
