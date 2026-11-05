@@ -1,18 +1,22 @@
 :root {
-  --site-primary: #171715;
-  --site-secondary: #d8d2c7;
-  --site-background: #f3f0e9;
-  --site-on-primary: #f5f1e9;
-  --site-on-secondary: #171715;
-  --site-on-background: #171715;
+  --site-primary: #173C38;
+  --site-secondary: #D9A936;
+  --site-background: #F5F0E5;
+  --site-on-primary: #F5F0E5;
+  --site-on-secondary: #173C38;
+  --site-on-background: #202B28;
+
   --site-font-body: Arial, Helvetica, sans-serif;
   --site-font-heading: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
   --site-heading-scale: 1;
   --site-spacing-scale: 1;
   --site-radius-scale: 1;
   --site-decoration-opacity: 1;
-  color-scheme: light dark;
+
+  color-scheme: light;
 }
+
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
 body { margin: 0; background: var(--site-background); color: var(--site-on-background); font-family: var(--site-font-body); }
@@ -118,20 +122,6 @@ td:first-child { font-weight:800; width:22%; font-size:11px; letter-spacing:.08e
  .event { grid-template-columns:1fr; gap:6px; }
  .split-visual { grid-template-columns:1fr; }
 }
-@media (prefers-color-scheme:dark) {
- :root { --site-background:#191917; --site-on-background:#f1eee7; --site-primary:#e7e1d6; --site-on-primary:#191917; --site-secondary:#34332f; --site-on-secondary:#f1eee7; }
- .section-head p, .city, .flow-step small { color:#aaa49a; }
- .media { background:#49463f; color:#f1eee7; }
- .media.dark { background:#ded8cd; color:#191917; }
- .split-card { background:#34332f; color:#f1eee7; }
- .split-card:last-child { background:#4c4942; }
- .metric { background:#34332f; }
- th, td { border-color:rgba(241,238,231,.22); }
- .timeline { border-color:#aaa49a; }
- .event:before { background:#f1eee7; }
- .footer { background:#34332f; color:#f1eee7; }
-}
-
 /* Real article photographs: replace only the image files in /images. */
 .media { padding: 0; min-height: 420px; }
 .media-photo { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0; }
@@ -140,4 +130,215 @@ td:first-child { font-weight:800; width:22%; font-size:11px; letter-spacing:.08e
 .media-caption .media-note { max-width: 320px; }
 .media.dark .media-caption { color: #fff; }
 @media (max-width:800px) { .media { min-height: 330px; } }
+
+/* =================================
+   KAZAKH MODERN ORNAMENT BACKGROUND
+================================= */
+
+body {
+  background-color: #F5F0E5;
+
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180' viewBox='0 0 180 180'%3E%3Cg fill='none' stroke='%23159B91' stroke-width='2' opacity='.17'%3E%3Cpath d='M90 90 C72 90 72 65 54 65 C36 65 36 88 50 94 C64 100 77 88 77 76 C77 65 68 58 58 58'/%3E%3Cpath d='M90 90 C108 90 108 65 126 65 C144 65 144 88 130 94 C116 100 103 88 103 76 C103 65 112 58 122 58'/%3E%3Cpath d='M90 90 L102 102 L90 114 L78 102 Z'/%3E%3C/g%3E%3C/svg%3E");
+
+  background-size: 180px 180px;
+}
+
+#site {
+  background-color: transparent;
+}
+
+/* =================================
+   HERO
+================================= */
+
+.hero {
+  background:
+    linear-gradient(120deg, #173C38, #102B28);
+}
+
+.hero:before {
+  background:
+    radial-gradient(
+      ellipse at 80% 30%,
+      rgba(21,155,145,.30),
+      transparent 40%
+    ),
+    repeating-linear-gradient(
+      135deg,
+      transparent 0 34px,
+      rgba(217,169,54,.10) 35px 36px
+    );
+
+  opacity: 1;
+}
+
+.hero-title span {
+  color: #D9A936;
+}
+
+.hero-stamp {
+  border: 2px solid #D95F45;
+  color: #F5F0E5;
+}
+
+/* =================================
+   ACCENT COLORS
+================================= */
+
+.progress {
+  background: #D95F45;
+}
+
+.nav a.active {
+  color: #159B91;
+  text-decoration-color: #D95F45;
+}
+
+.eyebrow {
+  color: #159B91;
+}
+
+.eyebrow::before {
+  content: "✳ ";
+  color: #D95F45;
+}
+
+.section-index {
+  color: #D9A936;
+}
+
+.city {
+  color: #159B91;
+}
+
+.brand-copy h3 {
+  color: #173C38;
+}
+
+.brand-copy a {
+  color: #168D84;
+  text-decoration-color: #D95F45;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
+}
+
+.brand-copy a:hover {
+  color: #D95F45;
+}
+
+/* =================================
+   STATS
+================================= */
+
+.stat {
+  background: #D9A936;
+}
+
+.stat:nth-child(2) {
+  background: #159B91;
+  color: white;
+}
+
+.stat:nth-child(3) {
+  background: #D95F45;
+  color: white;
+}
+
+/* =================================
+   QUOTES
+================================= */
+
+.quote {
+  background: #173C38;
+  border-left: 7px solid #D95F45;
+}
+
+.quote:before {
+  color: #D9A936;
+  opacity: .65;
+}
+
+/* =================================
+   VISUAL CARDS
+================================= */
+
+.split-card {
+  background: #D9A936;
+}
+
+.split-card:last-child {
+  background: #159B91;
+  color: white;
+}
+
+.flow-step {
+  border-color: #159B91;
+  border-width: 1px;
+}
+
+.flow-arrow {
+  color: #D95F45;
+}
+
+/* =================================
+   METRICS
+================================= */
+
+.metric {
+  background: #F0DFAF;
+}
+
+.metric:nth-child(2) {
+  background: #159B91;
+  color: white;
+}
+
+.metric:nth-child(3) {
+  background: #D95F45;
+  color: white;
+}
+
+/* =================================
+   TIMELINE
+================================= */
+
+.timeline {
+  border-left: 2px solid #159B91;
+}
+
+.event:before {
+  background: #D95F45;
+  border: 2px solid #F5F0E5;
+}
+
+/* =================================
+   CONCLUSION
+================================= */
+
+.conclusion {
+  background:
+    radial-gradient(
+      circle at 90% 10%,
+      rgba(21,155,145,.28),
+      transparent 35%
+    ),
+    #173C38;
+
+  border-top: 8px solid #D9A936;
+}
+
+.conclusion .last-line {
+  color: #D9A936;
+}
+
+/* =================================
+   FOOTER
+================================= */
+
+.footer {
+  background: #D9A936;
+  color: #173C38;
+  border-top: 3px solid #D95F45;
+}
+
 
