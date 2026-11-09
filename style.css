@@ -726,3 +726,66 @@ td:first-child { color: #526157; }
     margin: 45px 0 65px;
   }
 }
+/* ==========================================
+   MODERN EDITORIAL TYPOGRAPHY
+========================================== */
+
+:root {
+  --site-font-body: 'Manrope', sans-serif;
+  --site-font-heading: 'Space Grotesk', sans-serif;
+}
+
+/* Main text */
+body {
+  font-family: 'Manrope', sans-serif;
+}
+
+/* All major headings */
+.hero-title,
+.intro-copy h2,
+.section-head h2,
+.brand-copy h3,
+.conclusion h2 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.055em;
+}
+
+/* Article paragraphs */
+.brand-copy p,
+.body-copy,
+.section-head p,
+.conclusion p {
+  font-family: 'Manrope', sans-serif;
+  font-weight: 400;
+  letter-spacing: -0.015em;
+}
+
+/* Large quotations */
+.quote blockquote,
+.conclusion .last-line {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 600;
+}
+
+/* Statistics and numbers */
+.stat strong,
+.metric strong,
+.section-index,
+.split-card b,
+.flow-step strong {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+}
+
+/* Navigation and small labels */
+.nav,
+.brandmark,
+.eyebrow,
+.city,
+.hero-meta,
+.hero-kicker,
+.interview-meta,
+.audio-label {
+  font-family: 'Manrope', sans-serif;
+}
