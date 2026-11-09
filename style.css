@@ -607,3 +607,122 @@ td:first-child { color: #526157; }
     background-size: 190px 170px;
   }
 }
+
+/* ==========================================
+   AUDIO INTERVIEW — NEONOMAD
+========================================== */
+
+.interview-audio {
+  position: relative;
+  overflow: hidden;
+  margin: 70px 0 100px;
+  padding: clamp(28px, 5vw, 64px);
+  background: #193B35;
+  color: #F3F1E9;
+  border-top: 4px solid #B79A62;
+}
+
+.interview-audio::before {
+  content: "";
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  right: -80px;
+  top: -100px;
+  border: 1px solid rgba(183,154,98,.25);
+  border-radius: 50%;
+  box-shadow:
+    0 0 0 25px rgba(183,154,98,.04),
+    0 0 0 50px rgba(183,154,98,.03);
+  pointer-events: none;
+}
+
+.interview-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid rgba(243,241,233,.2);
+}
+
+.interview-audio .eyebrow {
+  color: #C5AA78;
+}
+
+.interview-number {
+  font-size: 10px;
+  letter-spacing: .16em;
+  color: #C5AA78;
+}
+
+.interview-content {
+  display: grid;
+  grid-template-columns: 1fr .8fr;
+  gap: 50px;
+  align-items: end;
+  padding-top: 45px;
+}
+
+.interview-content h3 {
+  font-size: clamp(38px, 6vw, 76px);
+  line-height: .9;
+  text-transform: uppercase;
+  letter-spacing: -.04em;
+  margin: 0 0 22px;
+}
+
+.interview-content p {
+  max-width: 470px;
+  font-size: 15px;
+  line-height: 1.8;
+  color: #D9DED4;
+}
+
+.interview-meta {
+  margin-top: 30px;
+  font-size: 10px;
+  letter-spacing: .13em;
+  color: #C5AA78;
+}
+
+.audio-player {
+  position: relative;
+  z-index: 2;
+  padding: 22px;
+  background: rgba(243,241,233,.08);
+  border: 1px solid rgba(197,170,120,.35);
+}
+
+.audio-label {
+  display: block;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: .15em;
+  color: #C5AA78;
+  margin-bottom: 16px;
+}
+
+.audio-player iframe {
+  display: block;
+  width: 100%;
+  border: none;
+  border-radius: 4px;
+  background: #F3F1E9;
+}
+
+@media (max-width: 800px) {
+  .interview-content {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .interview-info {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .interview-audio {
+    margin: 45px 0 65px;
+  }
+}
