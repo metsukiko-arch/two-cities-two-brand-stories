@@ -139,7 +139,7 @@ td:first-child { font-weight:800; width:22%; font-size:11px; letter-spacing:.08e
 
 body {
   background-color: #F5F0E5;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='200' viewBox='0 0 240 200'%3E%3Cg fill='none' stroke='%23159B91' stroke-width='2.5' opacity='.16' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M120 100 C105 100 103 82 91 82 C77 82 72 98 84 107 C96 116 111 105 109 92 C108 82 99 77 91 79'/%3E%3Cpath d='M120 100 C135 100 137 82 149 82 C163 82 168 98 156 107 C144 116 129 105 131 92 C132 82 141 77 149 79'/%3E%3Cpath d='M120 100 L132 112 L120 124 L108 112 Z'/%3E%3Cpath d='M120 100 L120 70 M120 124 L120 154'/%3E%3C/g%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='200' viewBox='0 0 240 200'%3E%3Cg fill='none' stroke='%23B79A62' stroke-width='2.5' opacity='.16' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M120 100 C105 100 103 82 91 82 C77 82 72 98 84 107 C96 116 111 105 109 92 C108 82 99 77 91 79'/%3E%3Cpath d='M120 100 C135 100 137 82 149 82 C163 82 168 98 156 107 C144 116 129 105 131 92 C132 82 141 77 149 79'/%3E%3Cpath d='M120 100 L132 112 L120 124 L108 112 Z'/%3E%3Cpath d='M120 100 L120 70 M120 124 L120 154'/%3E%3C/g%3E%3C/svg%3E");
 
   background-size: 240px 200px;
   background-attachment: fixed;
@@ -403,4 +403,207 @@ body {
 }
 .hero::before {
   background: none;
+}
+
+/* ==========================================
+   REFINED KAZAKH EDITORIAL PALETTE
+   Deep green / warm ivory / muted brass
+========================================== */
+
+:root {
+  --site-primary: #193B35;
+  --site-secondary: #B79A62;
+  --site-background: #F3F1E9;
+  --site-on-primary: #F3F1E9;
+  --site-on-secondary: #1D302B;
+  --site-on-background: #252D29;
+
+  --site-font-body: "Helvetica Neue", Arial, sans-serif;
+  --site-font-heading: "Arial Narrow", "Helvetica Neue", Arial, sans-serif;
+  --site-decoration-opacity: .72;
+}
+
+body {
+  background-color: var(--site-background);
+  color: var(--site-on-background);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='200' viewBox='0 0 240 200'%3E%3Cg fill='none' stroke='%23B79A62' stroke-width='2' opacity='.10' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M120 100 C105 100 103 82 91 82 C77 82 72 98 84 107 C96 116 111 105 109 92 C108 82 99 77 91 79'/%3E%3Cpath d='M120 100 C135 100 137 82 149 82 C163 82 168 98 156 107 C144 116 129 105 131 92 C132 82 141 77 149 79'/%3E%3Cpath d='M120 100 L132 112 L120 124 L108 112 Z'/%3E%3Cpath d='M120 100 L120 70 M120 124 L120 154'/%3E%3C/g%3E%3C/svg%3E");
+  background-size: 260px 220px;
+  background-attachment: fixed;
+}
+
+#site { background: transparent; }
+
+.topbar {
+  background: rgba(243,241,233,.94);
+  border-bottom: 1px solid rgba(25,59,53,.16);
+}
+
+.brandmark { color: #193B35; }
+.nav a { color: #34423C; }
+.nav a:hover, .nav a.active { color: #987B46; }
+
+.progress { background: #B79A62; }
+
+.hero {
+  background: linear-gradient(125deg, #193B35 0%, #102B27 100%);
+  color: #F3F1E9;
+}
+
+.hero::before {
+  background:
+    radial-gradient(ellipse at 78% 42%, rgba(183,154,98,.13), transparent 38%),
+    repeating-linear-gradient(135deg, transparent 0 42px, rgba(243,241,233,.025) 43px 44px);
+}
+
+.hero::after {
+  opacity: .22;
+}
+
+.hero-title span { color: #C5AA78; }
+
+.hero-stamp {
+  border: 1px solid rgba(197,170,120,.8);
+  color: #F3F1E9;
+}
+
+.hero-kicker::after {
+  opacity: .8;
+}
+
+.eyebrow { color: #8B7448; }
+.eyebrow::before { color: #B79A62; }
+
+.section-index { color: #B79A62; }
+
+.intro-copy h2,
+.section-head h2,
+.brand-copy h3,
+.quote blockquote,
+.conclusion h2,
+.conclusion .last-line {
+  font-family: "Arial Narrow", "Helvetica Neue", Arial, sans-serif;
+  font-weight: 800;
+  letter-spacing: -.045em;
+}
+
+.lead { color: #35443D; }
+.body-copy, .brand-copy p { color: #303934; }
+
+.stats {
+  background: #193B35;
+  border-color: #193B35;
+}
+
+.stat {
+  background: #E8E3D6;
+  color: #26342E;
+}
+
+.stat:nth-child(2) {
+  background: #D9DED4;
+  color: #26342E;
+}
+
+.stat:nth-child(3) {
+  background: #C5AA78;
+  color: #26342E;
+}
+
+.section { border-top-color: rgba(25,59,53,.22); }
+
+.section-head p { color: #68716A; }
+.city { color: #8B7448; }
+
+.brand-copy h3 { color: #193B35; }
+
+.brand-copy a {
+  color: #526F60;
+  text-decoration-color: #B79A62;
+  text-decoration-thickness: 1px;
+}
+
+.brand-copy a:hover { color: #987B46; }
+
+.media { background: #D9DED4; color: #26342E; }
+.media.dark { background: #263B34; color: #F3F1E9; }
+
+.quote {
+  background: #193B35;
+  color: #F3F1E9;
+  border-left: 4px solid #B79A62;
+}
+
+.quote:before { color: #C5AA78; }
+
+.split-visual {
+  background: #193B35;
+}
+
+.split-card {
+  background: #E8E3D6;
+  color: #26342E;
+}
+
+.split-card:last-child {
+  background: #D9DED4;
+  color: #26342E;
+}
+
+.flow-step { border-color: rgba(25,59,53,.3); }
+.flow-step small { color: #7D806F; }
+.flow-arrow { color: #A78C58; }
+
+.timeline { border-left-color: #B79A62; }
+.event:before {
+  background: #B79A62;
+  border: 2px solid #F3F1E9;
+}
+
+.metric-row {
+  background: #193B35;
+  border-color: #193B35;
+}
+
+.metric {
+  background: #E8E3D6;
+  color: #26342E;
+}
+
+.metric:nth-child(2) {
+  background: #D9DED4;
+  color: #26342E;
+}
+
+.metric:nth-child(3) {
+  background: #C5AA78;
+  color: #26342E;
+}
+
+th, td { border-bottom-color: rgba(25,59,53,.18); }
+th { color: #6E765F; }
+td:first-child { color: #526157; }
+
+.conclusion {
+  background:
+    radial-gradient(circle at 90% 10%, rgba(183,154,98,.14), transparent 36%),
+    #193B35;
+  border-top: 5px solid #B79A62;
+}
+
+.conclusion .last-line { color: #C5AA78; }
+
+.sources { color: #5A625B; }
+.sources a { color: #526F60; }
+
+.footer {
+  background: #E8E3D6;
+  color: #26342E;
+  border-top: 1px solid #B79A62;
+}
+
+@media (max-width: 800px) {
+  body {
+    background-attachment: scroll;
+    background-size: 190px 170px;
+  }
 }
